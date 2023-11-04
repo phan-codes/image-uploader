@@ -10,17 +10,15 @@ inputFile.addEventListener('change', displayImage);
 function displayImage() {
 	welText.style.display = 'none';
 
-	if (inputFile.files.length > 0) {
-		displayImg.src = URL.createObjectURL(inputFile.files[0]);
-		const fileName = inputFile.files[0].name;
-		imgNames.innerHTML += `<li> <p>- ${fileName}</p> </li>`;
+	displayImg.src = URL.createObjectURL(inputFile.files[0]);
+	const fileName = inputFile.files[0].name;
+	imgNames.innerHTML += `<li> <p>- ${fileName}</p> </li>`;
 
-		const reader = new FileReader();
-		reader.readAsDataURL(inputFile.files[0]);
-		reader.addEventListener('load', () => {
-			saveData(reader.result);
-		});
-	}
+	const reader = new FileReader();
+	reader.readAsDataURL(inputFile.files[0]);
+	reader.addEventListener('load', () => {
+		saveData(reader.result);
+	});
 }
 
 function clearAll() {
@@ -38,10 +36,14 @@ function saveData(imgData) {
 }
 
 function getData() {
-	displayImg.src = localStorage.getItem('displayedImg');
-	imgNames.innerHTML = localStorage.getItem('displayedImgNames');
-	if (imgNames.innerHTML != '') {
-		welText.style.display = 'none';
+	if (displayImg.src !== 'user-icon.png') {
+		displayImg.src = localStorage.getItem('displayedImg');
+		imgNames.innerHTML = localStorage.getItem('displayedImgNames');
+		if (imgNames.innerHTML != '') {
+			welText.style.display = 'none';
+		} else {
+			displayImg.src = 'user-icon.png';
+		}
 	}
 }
 getData();
