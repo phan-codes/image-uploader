@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow-y: scroll;
+}
+.container {
+	padding: 35px;
+	display: flex;
+	justify-content: center;
+	height: 260px;
+	width: 500px;
+	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+.left-col {
+	line-height: 30px;
+	width: 50%;
+	padding-right: 20px;
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+	overflow-y: scroll;
+}
+.left-col > h3 {
+	font-size: 15px;
+}
+.left-col > h4 {
+	color: rgb(215, 215, 215);
+	text-align: center;
+	margin: 40px;
+}
+.left-col > .uploaded-imgs {
+	list-style-type: none;
+	font-size: 13px;
+}
+.left-col > .uploaded-imgs > li {
+	position: relative;
+}
+.left-col > .uploaded-imgs > li > p {
+	width: 100%;
+}
+.left-col > .uploaded-imgs > li > .delete {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	cursor: pointer;
+}
+.left-col > .clear-all {
+	position: absolute;
+	bottom: 8px;
+	padding: 5px;
+	border-radius: 50px;
+	border: none;
+	outline: none;
+	width: 70px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.right-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 30px;
+	width: 50%;
+}
+.img-container {
+	position: relative;
+	height: 90%;
+	width: 100%;
+	background: #dcdbdb;
+	border-radius: 10px;
+}
+.img-container > #display-img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.right-col > label {
+	background: #a6a6a6;
+	border-radius: 50px;
+	padding: 5px;
+	width: 100px;
+	font-size: 12px;
+	text-align: center;
+	margin: 20px;
+	cursor: pointer;
+}
+.right-col > input {
+	display: none;
+}
+
+@media screen and (max-width: 385px) {
+	.container {
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: space-between;
+		width: 250px;
+		height: 550px;
+		padding: 10px 15px;
+		border-radius: 10px;
+	}
+	.left-col {
+		width: 100%;
+		height: 50%;
+		padding: 10px;
+	}
+	.right-col {
+		width: 100%;
+		height: 50%;
+		padding: 15px;
+	}
+	.img-container > #display-img {
+		height: 100%;
+	}
+}
