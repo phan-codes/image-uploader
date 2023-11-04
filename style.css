@@ -10,6 +10,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	overflow-y: scroll;
+	background-color: #000;
 }
 .container {
 	padding: 35px;
@@ -17,8 +18,11 @@ body {
 	justify-content: center;
 	height: 260px;
 	width: 500px;
-	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 1px 10px rgba(249, 232, 232, 0.55);
 	position: relative;
+	color: #fff;
+	background-color: #c700ff;
+	border-radius: 5px;
 }
 .left-col {
 	line-height: 30px;
@@ -84,13 +88,14 @@ body {
 }
 
 .right-col > label {
-	background: #a6a6a6;
+	background: #fff;
 	border-radius: 50px;
 	padding: 5px;
 	width: 100px;
 	font-size: 12px;
 	text-align: center;
 	margin: 20px;
+	color: #000;
 	cursor: pointer;
 }
 .right-col > input {
@@ -106,8 +111,10 @@ body {
 		height: 550px;
 		padding: 10px 15px;
 		border-radius: 10px;
+		padding-bottom: 40px;
 	}
 	.left-col {
+		border-radius: 25px;
 		width: 100%;
 		height: 50%;
 		padding: 10px;
@@ -115,9 +122,9 @@ body {
 	.right-col {
 		width: 100%;
 		height: 50%;
-		padding: 15px;
+		padding: 10px;
 	}
-	.img-container > #display-img {
-		height: 100%;
+	.img-container {
+		height: 85%;
 	}
 }
