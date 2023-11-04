@@ -1,8 +1,6 @@
 let inputFile = document.getElementById('input');
 let displayImg = document.getElementById('display-img');
-
 const imgNames = document.querySelector('.uploaded-imgs');
-const uploadIcon = document.querySelector('.upload-icon');
 const welText = document.querySelector('h4');
 
 inputFile.addEventListener('change', displayImage);
